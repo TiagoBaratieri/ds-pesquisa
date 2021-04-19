@@ -2,6 +2,7 @@ package com.baratieri.dspesquisa.entities;
 
 import com.baratieri.dspesquisa.entities.enums.Platform;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
