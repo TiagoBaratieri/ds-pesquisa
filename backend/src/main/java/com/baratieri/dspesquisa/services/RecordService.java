@@ -7,6 +7,8 @@ import com.baratieri.dspesquisa.entities.Record;
 import com.baratieri.dspesquisa.repositories.GameRepository;
 import com.baratieri.dspesquisa.repositories.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,4 +38,10 @@ public class RecordService {
     }
 
 
+    @Transactional(readOnly = true)
+    public Page<RecordDTO> findByMoment(Instant minDate, Instant maxDate,
+                                         PageRequest pageRequest) {
+        return repository.findByMoments(minDate,maxDate,pageRequest)
+                .map(x -> new RecordDTO(x));
+    }
 }
