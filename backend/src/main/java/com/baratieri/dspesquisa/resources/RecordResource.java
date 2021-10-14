@@ -31,8 +31,7 @@ public class RecordResource {
             @RequestParam(value = "max",defaultValue = "") String max,
             @RequestParam(value = "page", defaultValue = "0") Integer page,
             @RequestParam(value = "linesPerPage", defaultValue = "0") Integer linesPerPage,
-            @RequestParam(value = "orderBy", defaultValue = "moment") String orderBy,
-            @RequestParam(value = "direction",defaultValue = "DESC") String direction) {
+            @RequestParam(value = "orderBy", defaultValue = "moment") String orderBy) {
 
         Instant minDate = ("".equals(min)) ? null : Instant.parse(min);
         Instant maxDate = ("".equals(max)) ? null : Instant.parse(max);
@@ -41,7 +40,7 @@ public class RecordResource {
             linesPerPage = Integer.MAX_VALUE;
         }
 
-        PageRequest pageRequest = PageRequest.of(page,linesPerPage, Sort.Direction.valueOf(direction),orderBy);
+        PageRequest pageRequest = PageRequest.of(page,linesPerPage, Sort.Direction.DESC,orderBy);
 
         Page<RecordDTO> listDto = service.findByMoment(minDate,maxDate, pageRequest);
         return ResponseEntity.ok().body(listDto);
