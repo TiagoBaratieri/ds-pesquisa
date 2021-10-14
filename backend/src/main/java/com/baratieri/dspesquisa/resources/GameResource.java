@@ -1,7 +1,6 @@
 package com.baratieri.dspesquisa.resources;
 
 import com.baratieri.dspesquisa.dto.GameDTO;
-import com.baratieri.dspesquisa.repositories.GameRepository;
 import com.baratieri.dspesquisa.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
