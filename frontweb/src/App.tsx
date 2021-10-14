@@ -1,10 +1,10 @@
+import Navbar from "./components/navbar";
+import './App.css';
 
-
-function App() {
-  return (
-   <p>Olá mundo!</p>
-    
-  );
+const App = () => {
+  return(
+    <Navbar />
+  )
 }
 
 export default App;
