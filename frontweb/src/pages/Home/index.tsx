@@ -17,7 +17,9 @@ const Home = () => {
                 estão escolhendo!
               </p>
             </div>
-            <ButtonIcon />
+            <div>
+              <ButtonIcon />
+            </div>
           </div>
           <div className="home-image-container">
             <Gamer />
