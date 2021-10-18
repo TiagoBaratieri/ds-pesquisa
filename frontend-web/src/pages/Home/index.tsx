@@ -1,7 +1,8 @@
 import { ReactComponent as Gamer } from "assets/gamer.svg";
 import ButtonIcon from "components/ButtonIcon";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import './styles.css';
+
 
 const Home = () => {
   return (

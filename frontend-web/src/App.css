@@ -31,13 +31,6 @@ a {
   text-decoration: none;
 }
 
-.text-primary {
-  color: var(--color-turquoise);
-}
-
-.text-secondary {
-  color: var(--color-coral);
-}
 
 button {
   border: none;
